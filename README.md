@@ -77,6 +77,28 @@ npm run build
 
 ---
 
+## 🔐 Environment Variables & Security
+
+Copy the `.env.example` template to `.env.local` to configure your AI provider API keys locally:
+
+```bash
+cp .env.example .env.local
+```
+
+### Supported Environment Variables
+
+| Variable | Description | Default / Example |
+| :--- | :--- | :--- |
+| `VITE_OPENAI_API_KEY` | API Key for OpenAI GPT-4o models | `sk-...` |
+| `VITE_ANTHROPIC_API_KEY` | API Key for Anthropic Claude models | `sk-ant-...` |
+| `VITE_GEMINI_API_KEY` | API Key for Google Gemini models | `AIzaSy...` |
+| `VITE_LOCAL_LLM_ENDPOINT` | Custom base URL for local Ollama server | `http://localhost:11434/v1` |
+
+> [!IMPORTANT]
+> Never commit `.env` or `.env.local` files containing live API keys to version control. Keep secrets in `.env.local` which is strictly ignored by [.gitignore](file:///D:/Btech%20Projects/flyrank-capstone/.gitignore).
+
+---
+
 ## 🛠️ Extending with Real AI APIs
 
 The `src/services/aiService.ts` module is engineered to easily swap mock responses with live LLM provider APIs:
