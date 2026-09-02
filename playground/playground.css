@@ -1,0 +1,188 @@
+.a11y-playground {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+  color: var(--text-primary);
+}
+
+.a11y-playground h1 {
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+}
+
+.a11y-playground > p.a11y-intro {
+  color: var(--text-secondary);
+  margin-bottom: 28px;
+}
+
+.a11y-section {
+  background: var(--bg-glass);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.a11y-section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.a11y-section .a11y-help {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.a11y-help kbd {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}
+
+/* Modal */
+.a11y-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 20px;
+}
+
+.a11y-modal-content {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-glow);
+  border-radius: var(--radius-lg);
+  max-width: 480px;
+  width: 100%;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.a11y-modal-content:focus {
+  outline: none;
+}
+
+.a11y-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.a11y-modal-title {
+  font-size: 1.15rem;
+}
+
+.a11y-icon-button {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  width: 30px;
+  height: 30px;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.a11y-icon-button:hover {
+  color: var(--text-primary);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.a11y-icon-button:focus-visible,
+.a11y-modal-content :focus-visible,
+.a11y-tabs :focus-visible,
+.a11y-disclosure :focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 2px;
+}
+
+.a11y-modal-body {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Tabs */
+.a11y-tablist {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 16px;
+}
+
+.a11y-tab {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text-secondary);
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.a11y-tab:hover {
+  color: var(--text-primary);
+}
+
+.a11y-tab--active {
+  color: var(--accent-cyan);
+  border-bottom-color: var(--accent-cyan);
+}
+
+.a11y-tabpanel {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  padding: 4px 2px;
+}
+
+.a11y-tabpanel:focus {
+  outline: none;
+}
+
+/* Disclosure */
+.a11y-disclosure-trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  text-align: left;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  padding: 12px 14px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.a11y-disclosure-caret {
+  display: inline-block;
+  transition: transform var(--transition-fast);
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+}
+
+.a11y-disclosure-caret--open {
+  transform: rotate(90deg);
+}
+
+.a11y-disclosure-content {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  padding: 12px 14px 4px;
+}
