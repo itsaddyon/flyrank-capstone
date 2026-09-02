@@ -84,3 +84,24 @@ Before completing any task or marking a pull request / issue as resolved:
 2. **Linting Check**: Run `npm run lint` (or equivalent code health verification).
 3. **Runtime Test**: Verify dev server starts cleanly (`npm run dev`) with no unhandled browser console warnings or network breakage.
 4. **Log Inspection**: Inspect error tracebacks thoroughly before forming diagnostic hypotheses. Never suppress errors with empty `try/catch` blocks.
+
+# Project Instructions
+
+## Architecture
+- Keep the project in React + TypeScript + Vite.
+- Reuse existing components whenever possible.
+- Avoid unnecessary dependencies.
+
+## UI
+- Maintain the existing dark theme.
+- Keep layouts responsive for desktop, tablet, and mobile.
+- Do not introduce unrelated pages or features.
+
+## Forms
+- Use React Hook Form with Zod for validation.
+- Display clear validation messages.
+- Validate file types and file size before submission.
+
+## Development
+- Run `npm run build` before considering work complete.
+- Resolve TypeScript errors before finishing.
