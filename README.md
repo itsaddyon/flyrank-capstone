@@ -17,6 +17,7 @@
 - 🎛️ **Hyperparameter Controls**: Tweak LLM provider options (`gpt-4o`, `claude-3.5-sonnet`, `gemini-1.5-pro`), temperature (`0.0` - `1.0`), max tokens, and system persona prompts in real-time.
 - 🤖 **`AGENTS.md` Integration**: Pre-configured with strict coding standards, visual design rules, and verification directives for autonomous AI coding agents.
 - 🎨 **Modern Aesthetics**: Built with dark mode, glassmorphism (`backdrop-filter`), glowing CSS status indicators, custom scrollbars, and fluid typography.
+- ♿ **WAI-ARIA Accessibility Examples**: Features hand-written, keyboard-navigable components (Modal, Tabs, Disclosure) engineered to W3C APG patterns alongside production `shadcn/ui` implementations for educational comparison.
 
 ---
 
@@ -66,7 +67,12 @@ Launch the Vite local development server with HMR:
 ```bash
 npm run dev
 ```
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+The application uses a lightweight path-based router. Once the server is running, you can access the following views:
+
+- [http://localhost:3000/](http://localhost:3000/) - **The AI Workbench**: The main interface for chat, tool visualizers, and hyperparameter controls.
+- [http://localhost:3000/playground](http://localhost:3000/playground) - **A11y Playground**: Demonstrates the hand-written, WAI-ARIA compliant Accessible Modal, Tabs, and Disclosure components.
+- [http://localhost:3000/shadcn-demo](http://localhost:3000/shadcn-demo) - **Shadcn/ui Demo**: Demonstrates the auto-generated `shadcn/ui` components for comparison (see `NOTES.md` for the technical breakdown).
 
 ### 3. Build & Type Check
 Validate TypeScript types and compile production-ready minified bundles:
